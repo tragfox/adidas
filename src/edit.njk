@@ -38,7 +38,7 @@ title: Sản phẩm
         <div class="flex flex-col sm:flex-row sm:gap-4">
           <div class="form-control">
             <label class="label">
-              <span class="label-text">Title</span>
+              <span class="label-text">Tên</span>
             </label>
             <input
               type="text"
@@ -49,7 +49,7 @@ title: Sản phẩm
           </div>
           <div class="form-control">
             <label class="label">
-              <span class="label-text">Subtitle</span>
+              <span class="label-text">Nhãn</span>
             </label>
             <input
               type="text"
@@ -73,15 +73,26 @@ title: Sản phẩm
           </div>
           <div class="form-control">
             <label class="label">
-              <span class="label-text">Ảnh (URL)</span>
+              <span class="label-text">Số lượng</span>
             </label>
             <input
-              type="text"
-              placeholder="https://..."
+              type="number"
+              placeholder="0"
               class="input input-bordered"
-              x-model="product.image"
+              x-model="product.quantity"
             >
           </div>
+        </div>
+        <div class="form-control">
+          <label class="label">
+            <span class="label-text">Ảnh (URL)</span>
+          </label>
+          <input
+            type="text"
+            placeholder="https://..."
+            class="input input-bordered"
+            x-model="product.image"
+          >
         </div>
         <div class="form-control mt-6">
           <button

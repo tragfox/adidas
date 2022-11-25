@@ -48,12 +48,16 @@ title: Sản phẩm
         <span class="title-font font-medium text-2xl">
           <span x-text="product.price">0</span>K
         </span>
-        <div class="form-control">
+        <div x-show="product.quantity == 0" class="form-control">
+          Hết hàng
+        </div>
+        <div x-show="product.quantity != 0" class="form-control">
           <div class="input-group bg-transparent">
             <input
               type="number"
               class="input input-bordered input-primary w-24"
               min="1"
+              :max="product.quantity"
               x-model="currentQuantity"
             >
             <button class="btn btn-primary" @click="addToCart()">Cho vào giỏ</button>
